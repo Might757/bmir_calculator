@@ -1,0 +1,128 @@
+:root {
+    --faded_white: rgba(255, 255, 255, 0.632);
+}
+body, html {
+    font-family: 'Poppins', sans-serif !important;
+    background-color:rgb(249, 249, 249) !important;
+    overflow-x: hidden !important;
+}
+.fieldBox {
+background: #303030;
+border-radius: 25px;
+}
+.bigTitle {
+        /* Body Mass Index Calculator */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 58px;
+    color: #F8F8F8;
+
+    text-shadow: 0px 2px 4px #541675;
+
+}
+.calcButton {
+    border-radius: 100px;
+    background-color: #61297E;
+    border-color: #61297E;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 50%;
+    height: 40px;
+    box-shadow: 1px 17px 33px -11px rgba(0,0,0,0.31);   
+}
+.calcButton:hover {
+    border-radius: 100px;
+    background-color: #2d133a;
+    border-color: #2d133a;
+    color: white;
+    transition: background-color 2s forwards ease-in-out;
+}
+
+.calcButton::after {
+    background-color: #1a0808;
+    border-color: #1a0808;
+}
+.resetButton {
+    border-radius: 100px;
+    background-color: #491717;
+    border-color: #491717;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 50%;
+    height: 40px;
+    box-shadow: 1px 17px 33px -11px rgba(0,0,0,0.31);   
+}
+.resetButton:hover {
+    border-radius: 100px;
+    background-color: #1a0808;
+    border-color: #1a0808;
+    color: white;
+    transition: background-color 2s forwards ease-in-out;
+}
+.resetButton:active, .resetButton:focus {
+    background-color: #1a0808;
+    border-color: #1a0808;
+}
+
+.resetButton::after {
+    background-color: #2d133a;
+    border-color: #2d133a;
+}
+@keyframes fade-up {
+    from {top: 100px; opacity: 0%;}
+    to {top: 0px; opacity: 100%;}
+}
+
+@keyframes fade-right {
+    from {left: 25px; opacity: 0%;}
+    to {left: 0px; opacity: 100%;}
+}
+
+.bmiBox {
+    position: relative;
+    color: white;
+    padding: 200px;
+    background: #303030;
+    border-radius: 25px; 
+    animation: fade-up 1s ease-in-out;
+}
+
+.formStyle {
+    color: white;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.fadedText {
+    color: var(--faded_white);
+    font-style: italic;
+}
+
+.inputStyle {
+    border-radius: 100px;
+}
+
+.bmiStyle {
+    font-weight: 700;
+    text-shadow: #00000025;
+}
+
+.bmirImg {
+    position: relative;
+    height: 100%;
+    animation: fade-right 1s ease-in-out;  
+}
+
+.activitySelect {
+    background-color: white;
+    font-weight: 500;
+    border-radius: 100px !important;
+}

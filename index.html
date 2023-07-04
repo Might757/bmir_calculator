@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/strict.dtd">
+  <html xmlns="http://www.w3.org/TR/xhtml1/strict" >
+    <head>
+      <title>BMI/BMR Calculator</title>
+      <link rel="icon" href="./img/svg/calculator.svg">
+      <link rel="stylesheet" href="./css/bootstrap.css">
+      <link rel="stylesheet" href="./css/style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <!-- Title Row -->
+        <div class="row p-2">
+          <div class="col">
+          </div>
+          <div class="col-10">
+            <h1 class="text-center bigTitle" data-aos="zoom-in" data-aos-duration="1000">BMI/BMR Calculator</h1>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+        <!-- Form Row -->
+        <div class="row" id="formRow">
+          <div class="col-12 col-lg-3 text-center align-self-end">
+              <img src="./img/svg/twoperson.svg" data-aos="fade-right" data-aos-duration="2000" style="width: 300px;"/>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="fieldBox formStyle" data-aos="fade-up" data-aos-duration="1000">
+              <form style="padding: 100px">
+                <!-- Weight field -->
+                <label for="weight" class="form-label" style="font-weight: 700;">Current Weight</label>
+                <div class="row g-2">
+                  <div class="col-6 col-lg-8">
+                      <input type="number" class="form-control inputStyle" id="weight" max="300" min="1" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-title="Error" data-bs-content="Please select a valid number." data-bs-custom-class="error-popover">
+                  </div>
+                  <div class="col-6 col-lg-4">
+                    <select class="form-select activitySelect" id="wMethod">
+                      <option value="kg" selected>kg</option>
+                      <option value="pound">pound</option>
+                      <option value="stone">stone</option>
+                    </select>
+                  </div>
+                </div>
+                <!--HEIGHT ROW-->
+                <label for="height" class="form-label mt-3" style="font-weight: 700;">Current Height</label>
+                <div class="row g-2">
+                  <div class="col-6 col-lg-8">
+                      <input type="text" class="form-control inputStyle" id="height" max="250" min="1" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-title="Error" data-bs-content="Please select a valid number." data-bs-custom-class="error-popover">
+                  </div>
+                  <div class="col-6 col-lg-4">
+                    <select class="form-select activitySelect" id="hMethod">
+                      <option value="cm" selected>cm</option>
+                      <option value="feetin">feet + inches</option>
+                      <option value="meters">meters</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Age field -->
+                <div class="mb-3 mt-3">
+                  <label for="age" class="form-label" style="font-weight: 700;">Current Age</label>
+                  <input type="number" class="form-control inputStyle" id="age" max="100" min="1" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-title="Error" data-bs-content="Please select a valid number." data-bs-custom-class="error-popover">
+                  <div id="heightHelp" class="form-text fadedText">Age must be in years.</div>
+                </div>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" class="form-check-input" name="flexRadioSex" id="male" value="male" checked>
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" class="form-check-input" name="flexRadioSex" id="female" value="female">
+                      <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <!-- select button -->
+                    <select class="form-select form-select-sm form-check-inline activitySelect mt-3" id="activity">
+                      <option value="1.2" selected>Sedentary - Very little exercise or chores.</option>
+                      <option value="1.375">Lightly active - Engage in exercise at least 1 to 3 days in a week.</option>
+                      <option value="1.55">Moderately active - You move a lot during the day and workout at least 3 to 5 days in a week.</option>
+                      <option value="1.725">Very active - You play sports or engage in vigorous exercise on most days.</option>
+                      <option value="1.9">Extra active - You do intense workouts 6 to 7 days a week.</option>
+                    </select>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary calcButton mt-5" onclick="calculate()">CALCULATE</button>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary resetButton mt-5" onclick="resetFields()">RESET</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 text-center align-self-end">
+              <img src="./img/svg/oneperson.svg" data-aos="fade-left" data-aos-duration="3000" style="width: 300px;"/>
+          </div>
+        </div>
+        <div class="row m-5" id="bmiRow">
+
+        </div>
+      </div>
+      <script src="./js/popper.js"></script>
+      <script src="./js/bootstrap.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="./js/script.js"></script>
+    </body>
+
+
+  </html>
